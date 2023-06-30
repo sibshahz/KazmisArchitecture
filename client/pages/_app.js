@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
 import Layout from '../components/layout';
 import Head from 'next/head';
 import '../components/hero-slider/hero-slider.scss';

@@ -1,9 +1,21 @@
 import Head from 'next/head';
+import { useEffect } from 'react';
 import cls from 'classnames';
 import styles from '../styles/About.module.css';
 import { TitleWrap } from '../components/title-wrap/title-wrap.component';
 import aboutPic from '../public/images/aboutPic.jpg';
+import { useGetAboutPageContentQuery } from '../state/api';
 export default function About() {
+  useEffect(() => {
+    return () => {
+    }
+  }, [])
+  const { data, isLoading } = useGetAboutPageContentQuery();
+
+  if(data){
+    console.log(data);
+  }
+  
   return (
     <div className={styles.container}>
       <Head>
