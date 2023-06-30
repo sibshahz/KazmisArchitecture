@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @font-face {
+  font-family: 'jostitalic';
+  font-variation-settings: 100 1000;
+  font-weight: 100 1000;
+  font-style: italic;
+  src: 
+       url('../public/fonts/jost-italic-variablefont_wght-webfont.woff') format('woff-variations'),
+       url('../public/fonts/jost-italic-variablefont_wght-webfont.woff2') format('woff2-variations');
+}
+@font-face {
+  font-family: 'jostregular';
+  font-variation-settings: 100 1000;
+  font-weight: 100 1000;
+  font-style: normal;
+  src: url('../public/fonts/jost-variablefont_wght-webfont.woff') format('woff-variations'),
+        url('../public/fonts/jost-variablefont_wght-webfont.woff2') format('woff2-variations');
+} */
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  overflow-x: hidden;
+}
+body{
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-size: 1rem;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* .main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+@font-face {
+  font-family: "jost";
+  src: url("../public/fonts/Jost-Black.ttf") format("truetype");
+  font-weight: bolder;
+  font-style: normal;
+}
+@font-face {
+  font-family: "jost";
+  src: url("../public/fonts/Jost-Bold.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "jost";
+  src: url("../public/fonts/Jost-SemiBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "jost";
+  src: url("../public/fonts/Jost-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "jost";
+  src: url("../public/fonts/Jost-Medium.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "jost";
+  src: url("../public/fonts/Jost-Light.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "jost";
+  src: url("../public/fonts/Jost-ExtraLight.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+
+/* @font-face {
+  font-family: 'MyWebFont';
+  src: url('myfont.woff') format('woff'), 
+       url('myfont.ttf') format('truetype');
+}   */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: 'jost', sans-serif;
+  font-weight: normal;
+  /* max-width: 1320px; */
+
+}
+.contentWidth{
+  max-width: 1280px;
+  width: 100%;
+  /* max-width: 1320px; */
+  padding: 0 3rem;
+  margin: 0 auto;
+}
+a {
+  color: var(--footer-text);
+  text-decoration: none;
+}
+a:hover{
+  color: var(--bg-black);
+}
+
+
+
+/* @media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+} */
+
+:root {
+  --text-purple: rgba(67, 56, 202, 1);
+  --text-purple-dark: rgba(79, 70, 229, 1);
+  --text-black: rgba(17, 24, 39, 1);
+  --text-white-100: rgba(229, 231, 235, 1);
+  
+  --light-grey: #c9c9c9;
+  --white: #ffffff;
+  --golden:#e7b962;
+  --light-black: rgb(40,40,40);
+  --bg-black:#1e1e1e;  
+  --black-heading:#121212;
+  --light-heading:#383838;
+  --footer-text:#9e9e9e;
+  --body-color:#4c4c4c;
+  --gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);
+  --gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);
+  --gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);
+  --gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);
+  --gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);
+  --gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);
+  --gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);
+  --gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);
+  --gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);
+  --gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);
+  --gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);
+  --gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);
+  --font-size--small: 13px;
+  --font-size--small--medium:15px;
+  --font-size--medium: 18px;
+  --font-size--large: 36px;
+  --font-size--x-large: 42px;
+  --spacing--20: 0.44rem;
+  --spacing--30: 0.67rem;
+  --spacing--40: 1rem;
+  --spacing--50: 1.5rem;
+  --spacing--60: 2.25rem;
+  --spacing--70: 3.38rem;
+  --spacing--80: 5.06rem;
+}
+/** Breakpoints:
+  sm: min-width: 640px;
+  md: min-width: 768px;
+  lg: min-width: 1024px;
+  xl: min-width: 1280px;
+  2xl: min-width: 1536px;
+**/
+
+.slick-arrow{
+  z-index: 9;
+} 
+.slick-prev,.slick-next{
+  display: block;
+  /* background: rgba(17, 24, 39, 1); */
+  /* z-index: 9; */
+  width: 50px;
+  height: 50px;
+  /* left: 0; */
+  top: 50%;
+}
+.slick-prev:hover,.slick-next:hover{
+  /* background:rgba(17, 24, 39, 0.8) ; */
+}
+.slick-prev{
+  left: 0;
+}
+.slick-next{
+  right: 0;
+}

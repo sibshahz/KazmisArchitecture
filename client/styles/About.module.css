@@ -1,0 +1,40 @@
+.aboutIntro{
+    max-width: 600px;
+    margin: 0 auto;
+}
+.aboutIntro h5{
+    font-size: 13px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--golden);
+    margin-bottom: 10px;
+}
+.aboutIntro h2{
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    text-transform: none;
+    color: #000000;
+    line-height: 38px;
+    padding-bottom: 60px;
+}
+.aboutContent h3{
+    padding-bottom:30px;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    text-transform: none;
+    color: #000000;
+}
+.aboutContent p{
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    text-transform: none;
+    color: #696969;
+    line-height: 1.7;
+    margin-bottom:20px;
+    text-align: justify;
+}

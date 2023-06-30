@@ -1,0 +1,29 @@
+ /* font color #393939 */
+ /* years color #a2a2a2 */
+ /* bg color #f7f7f7 */
+ .expContainer{
+    background-color: #f7f7f7;
+    padding-bottom: 26px;
+ }
+ .expItem{
+    /* background-color: #f7f7f7; */
+    text-align: center;
+    margin-top: -13%;
+ }
+ .expItem .digit{
+    color: #393939;
+   font-size: 52px;
+   font-size: 36px;
+   font-weight: 500;
+ }
+ .expItem .description{
+    color: #a2a2a2;
+    font-size: 18px;
+   font-weight: 200;
+ }
+ .expItem .borderBottom{
+    width: 12px;
+    border-top: 1px solid #393939;
+    margin: 0 auto;
+    margin-top: 26px;
+ }

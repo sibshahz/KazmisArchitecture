@@ -1,0 +1,19 @@
+.titleWrap{
+    text-align: center;
+    padding: 180px 0px 160px 0px;
+    min-height: 100vh;
+}
+.title{
+    font-size: 75px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    text-transform: none;
+    color: #0f0f0f;
+}
+.subTitle{
+    font-size: 25px;
+    font-style: normal;
+    letter-spacing: 0px;
+    color: #545454;
+    margin-top: 15px;
+}

@@ -1,0 +1,48 @@
+.outline {
+    color: transparent;
+    color: #0f0c29;
+    /* color:#fbb900; */
+    background-color: rgba(255,255,255,.5);
+    z-index: 1000;
+    /* text-shadow: 2px 1px 2px black; */
+    /* color: rgba(255, 255, 255, 0.2); */
+    /* -webkit-text-stroke: 2px black;
+    text-stroke: 2px black; */
+    text-transform: capitalize;
+    position: absolute;
+    z-index: 1000;
+    max-width: 60%;
+    top: 0;
+    left: 10%;
+    padding: 1rem 2rem;
+    font-size: 4rem;
+    font-weight: 900;
+    text-align: left;
+    margin-left: 2rem;
+    margin-top: 40vh;
+    
+  }
+  .outline p{
+    font-size: 2rem;
+  }
+  @media screen and (max-width:768px) {
+    .outline{
+      font-size:3rem;
+      margin-top: 40vh;
+    }
+    .outline p{
+      font-size: 1.5rem;
+      
+    }
+  }
+  @media screen and (max-width:640px) {
+    .outline{
+      font-size:2rem;
+      width: 100%;
+      margin-left: .5rem;
+    }
+    .outline p{
+      font-size: 1.5rem;
+      
+    }
+  }

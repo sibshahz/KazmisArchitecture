@@ -1,0 +1,105 @@
+.aboutSection{
+    /* margin-top: -56px; */
+    margin-top: 140px;
+    z-index: 2;
+}
+.whatWeDo{
+    /* display: flex;
+    flex-direction: row;
+    /* gap: var(--spacing--50); */
+    /* flex-basis: fit-content;
+    flex-wrap: wrap;
+    justify-content: space-between;  */
+    /* margin-bottom: 70px; */
+    grid-template-areas:"a a b b"
+                        ". . c c" ;
+}
+.weDo:first-of-type{
+    grid-area:a;
+}
+.weDo:nth-of-type(2){
+    grid-area: b;
+}
+.weDo:last-of-type{
+    grid-area:c;
+}
+.weDo{
+    background: white;
+    /* box-shadow: 0 15px 35px rgb(0 0 0 / 7%);
+    -moz-box-shadow: 0 15px 35px rgba(0, 0, 0,0.07);
+    -webkit-box-shadow: 0 15px 35px rgb(0 0 0 / 7%); */
+        box-shadow: 0 15px 35px rgb(0 0 0 / 12%);
+    -moz-box-shadow: 0 15px 35px rgba(0, 0, 0,0.07);
+    -webkit-box-shadow: 0 15px 35px rgb(0 0 0 / 7%);
+    /* margin-right: 20px; */
+    /* margin-bottom: 0px; */
+    /* margin-left: 20px;
+    max-width: 352px; */
+    z-index: 2;
+    padding: 50px 40px 50px 40px;
+}
+.borderBottom{
+    width: var(--font-size--medium);
+    display: block;
+    border-bottom:1px solid black;
+}
+.weDo h2{
+    font-size: 24px;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: none;
+    color: #121212;
+}
+.weDo h2, .weDo .borderBottom, .weDo p,.weDo .icon{
+    margin-bottom:18px;
+}
+.weDo p{
+    font-size: 17px;
+    font-size: 15px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    text-transform: none;
+    color: #494949;
+}
+.icon i{
+    font-size: 56px;
+    display: block;
+    margin-bottom: 28px;
+}
+
+.actionButton{
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #060606;
+    padding: 0px 0px 0px 0px;
+    text-transform: none;
+    border-radius: 0px;
+    display: inline-block;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-width: 0px 0px 3px 0px;
+    border-color: #dddddd;
+    vertical-align: middle;
+}
+.actionButton:hover{
+    color:#7f7f7f;
+}
+.aboutTitle{
+    font-size: 44px;
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: 6px;
+    text-transform: none;
+    color: #121212;
+}
+.aboutArch{
+    min-height: 100vh;
+}
+.aboutPara{
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: none;
+    color: #676767;
+}

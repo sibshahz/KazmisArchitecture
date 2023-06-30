@@ -1,0 +1,176 @@
+.headContainer{
+    /* background-image: url('../../public/images/tactile_noise.png'); */
+    /* background-repeat: repeat; */
+    /* background-attachment: fixed; */
+    /* position: fixed; */
+    /* background-color: rgba(255, 255, 255, 0.8); */
+}
+.checkbox{
+    display: none;
+    border: none;
+}
+
+.nav{
+    overflow: hidden;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .0);
+    color: rgb(0, 0, 0);
+    position: fixed;
+    text-align: center;
+    top: 0;
+    z-index: 1999;
+    font-size: large;        
+    opacity: 0;
+    width: 0;
+    transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.headContainer .checkbox:checked~.nav{
+    opacity: 1;
+    width: 100%;
+}
+.nav ul{
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+.nav ul li{
+    /* width: 50%; */
+}
+.nav ul li a{
+    /*width: 100%;
+    *//*font-size: 30px;
+    */text-transform: uppercase;
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 1rem 2rem;
+    color: #fff;
+    display: block;
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fbb900 50%);
+    
+    background-size: 220%;
+}
+.nav ul li a:hover,.nav ul li a:active{
+    background-position: 100%;
+    /* color: $color-primary; */
+    transform: translateX(1rem);
+    /* transform: translate(6px);
+    -webkit-transform: translate(6px);
+    -moz-transform: translate(6px);
+    -ms-transform: translate(6px);
+    -o-transform: translate(6px); */
+}
+
+.hamburger{
+    background-color: #fff;
+    height: 4rem;
+    width: 4rem;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    border-radius: 50%;
+    z-index: 2000;
+    -webkit-box-shadow: 0 1rem 3rem rgb(0 0 0 / 10%);
+    box-shadow: 0 1rem 3rem rgb(0 0 0 / 10%);
+    text-align: center;
+    cursor: pointer;
+}
+.navBackground{
+    background-color: #ececec;
+    height: 4rem;
+    width: 4rem;
+    position: fixed;
+    top: 2rem;
+    border-radius: 50%;
+    right: 2rem;
+    z-index: 1998;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.headContainer .checkbox:checked~.navBackground{
+    transform: scale(80);
+    -webkit-transform: scale(80);
+    -moz-transform: scale(80);
+    -ms-transform: scale(80);
+    -o-transform: scale(80);
+}
+.hamburger .burger{
+    width: 1.8rem;
+    height: 2px;
+    background-color: #333;
+    display: inline-block;
+    margin-bottom: 6px;
+    position: relative;
+    margin-top: 1.5rem;
+    transition: all .2s;
+
+}
+.hamburger .burger::before{
+    margin-top: 8px;
+}
+.hamburger .burger::before:hover{
+    
+}
+.headContainer .checkbox:checked~.hamburger .burger{
+    left: 0px;
+    top: 6px;
+    transform: rotate(-120deg);
+    -webkit-transform: rotate(-120deg);
+    -moz-transform: rotate(-120deg);
+    -ms-transform: rotate(-120deg);
+    -o-transform: rotate(-120deg);
+}
+.headContainer .checkbox:checked~.hamburger .burger::after{
+    margin-left: 0;
+    margin-top: 0;
+    transform: rotate(280deg);
+    -webkit-transform: rotate(280deg);
+    -moz-transform: rotate(280deg);
+    -ms-transform: rotate(280deg);
+    -o-transform: rotate(280deg);
+}
+.headContainer .checkbox:checked~.hamburger .burger::before{
+    display: none;
+}
+.hamburger .burger::after{
+    margin-top: 16px;
+}
+.hamburger .burger::after,.hamburger .burger::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+.hamburger .burger::before,.hamburger .burger::after{
+    width: 1.8rem;
+    height: 2px;
+    background-color: #333;
+    display: inline-block;
+}
+/** Breakpoints:
+  sm: min-width: 640px;
+  md: min-width: 768px;
+  lg: min-width: 1024px;
+  xl: min-width: 1280px;
+  2xl: min-width: 1536px;
+**/

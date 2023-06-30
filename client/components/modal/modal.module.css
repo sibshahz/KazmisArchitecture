@@ -1,0 +1,60 @@
+/* .superModal{
+    color:black;
+    background:grey;
+    z-index:9999;
+    font-size:66;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:1000px;
+    position:'fixed';
+} */
+@keyframes opac {
+    0% {
+      scale: .6;
+      opacity: 0;
+        /* transform:scaleY(.2) scaleX(0);
+        -webkit-transform:scaleY(.2) scaleX(0);
+        -moz-transform:scaleY(.2) scaleX(0);
+        -ms-transform:scaleY(.2) scaleX(0);
+        -o-transform:scaleY(.2) scaleX(0); */
+}
+    /* 50% {
+        
+        transform:scaleY(1) scaleX(.5);
+        -webkit-transform:scaleY(1)   scaleX(.5);
+        -moz-transform:scaleY(1)   scaleX(.5);
+        -ms-transform:scaleY(1)   scaleX(.5);
+        -o-transform:scaleY(1)   scaleX(.5);
+} */
+    100%{
+      scale: 1;
+      opacity: 1;
+      /* opacity:1;
+      transform: scaleY(1) scaleX(1);
+      -webkit-transform: scaleY(1) scaleX(1);
+      -moz-transform: scaleY(1) scaleX(1);
+      -ms-transform: scaleY(1) scaleX(1);
+      -o-transform: scaleY(1) scaleX(1); */
+}
+  }
+
+  .closeButton{
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    z-index: 10000;
+    color: #fff;
+    opacity: .75;
+    font-size:50px;
+    transition: all .4s ease-out;
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -ms-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+}
+  .closeButton:hover{
+    opacity: 1;
+    cursor: pointer;
+  }

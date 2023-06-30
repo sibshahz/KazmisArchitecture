@@ -1,0 +1,74 @@
+.teamSection{
+
+}
+.memberCard{
+    border: 1px solid #e6e6e6;
+}
+.mainTitle{
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    text-transform: none;
+    color: #000000;
+}
+.tagLine{
+    font-size: 13px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #777777;
+}
+.memberName{
+    line-height: 26px;
+    overflow-wrap: break-word;
+    font-size: 18px;
+    font-weight: 600;
+    color: #0c0c0c;
+    margin-bottom: 8px;
+}
+.memberPosition{
+    margin-bottom: 8px;
+    color: rgb(157,157,157);
+    font-size: 15px;
+    font-weight: 200;
+}
+.memberImage{
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    width: 37%;
+    max-width: 37%;
+    max-height: 210px;
+}
+.memberDetails{
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    padding:30px 30px 20px;
+    width: 63%;
+    min-width: 63%;
+}
+.memberSocial{
+    margin: 18px 0 12px 0;
+}
+.memberSocial a{
+    font-size: 16px;
+    border-color: #e5e5e5;
+    border-width: 1px;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    display: inline-block;
+    color: #919baa;;
+    text-align: center;
+}
+.memberSocial a:hover{
+    border-color: #e7b962;
+    color: #fff;
+    background-color: #e7b962;
+}

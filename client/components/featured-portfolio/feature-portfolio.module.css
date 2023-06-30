@@ -1,0 +1,139 @@
+.itemDetail{
+    margin-top: 94%;
+    margin-left: 40px;
+    z-index: 5;
+    margin-right: 40px;
+    box-sizing: border-box;
+    display: block;
+    box-shadow: 0 0 20px rgb(0 0 0 / 15%);
+    line-height: 26px;
+    padding-bottom: 14px;
+}
+.itemDetail:hover{
+    cursor: pointer;
+}
+.itemCategory{
+    color: rgb(157,157,157);
+    font-size: 16px;
+    font-size: 15px;
+    font-weight: 200;
+}
+.itemCategory span{
+    margin-right: 8px;
+}
+.itemTitle{
+
+}
+.itemTitle h3{
+    margin-bottom: 0;
+    display: inline;
+    padding-bottom: 5px;
+    line-height: 26px;
+    overflow-wrap: break-word;
+    font-size: 18px;
+    color: #0c0c0c;
+}
+.icon{
+    font-size: 22px;
+    line-height: 26px;
+    vertical-align: middle;
+    margin-left: 16px;
+}
+.icon{
+    color: rgb(33,33,33);
+    font-size: 22px;
+    text-align: center;
+}
+.icon:hover{
+    color:rgb(157,157,157);
+}
+.cover{
+    background-color: rgba(0,0,0,.7);
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    z-index: 2;
+    transition:opacity 1s;
+    -webkit-transition:opacity 1s;
+    -moz-transition:opacity 1s;
+    -ms-transition:opacity 1s;
+    -o-transition:opacity 1s;
+}
+.cover:hover{
+    opacity: 1;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+.cover i{
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    width: 100%;
+    margin-top: 48%;
+}
+
+
+.portfolioImage{
+    scale: 1;
+    z-index: 2;
+    transition: scale 1s linear;
+    -webkit-transition: scale 1s linear;
+    -moz-transition: scale 1s linear;
+    -ms-transition: scale 1s linear;
+    -o-transition: scale 1s linear;
+}
+.portfolioImage:hover{
+    scale: 1.3;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+.container{
+    width: 100%;
+    height: 90.5%;
+    position: absolute;
+    overflow: hidden;
+}
+.container .bgImage{
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    transition:background-size 1s;
+    -webkit-transition:background-size 1s;
+    -moz-transition:background-size 1s;
+    -ms-transition:background-size 1s;
+    -o-transition:background-size 1s;
+}
+.container:hover .bgImage{
+    background-size: 105% 105%;
+    transition-duration: 1s;
+    background-origin: initial;
+}
+.mainTitle{
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    text-transform: none;
+    color: #000000;
+}
+.tagLine{
+    font-size: 13px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #777777;
+}
+.loadMore{
+    font-size: 17px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    padding: 0 0 2px;
+    margin: 20px 0 40px 0;
+    display: inline-block;
+}
