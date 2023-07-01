@@ -3,34 +3,12 @@ import { useState,useRef,useEffect } from 'react';
 import cls from 'classnames';
 import styles from '../styles/Services.module.css';
 import { TitleWrap } from '../components/title-wrap/title-wrap.component';
-const services=[
-  {
-  service: "Interior Design",
-  detail: "At Kazmi's Architects, we understand the transformative power of interior design. Our team of experienced designers works closely with clients to create spaces that are not only aesthetically pleasing but also functional and reflective of their unique style and needs. From residential to commercial projects, we meticulously plan and curate every element, including layout, lighting, color schemes, materials, and furniture selection. Our focus is on creating harmonious and inviting interiors that enhance the overall ambiance and comfort of the space."
-  },
-  {
-  service: "Exterior Design",
-  detail: "The exterior of a building is its first impression, and at Kazmi's Architects, we excel in creating visually striking and functional exterior designs. Our team considers the architectural style, site context, and client's vision to develop innovative and impactful exteriors. We utilize a combination of elements such as facade design, landscaping, lighting, and materials to enhance the building's aesthetics and blend it harmoniously with its surroundings. Whether it's a residential complex, commercial building, or public space, our exterior designs make a lasting statement."
-  },
-  {
-  service: "Custom Design",
-  detail: "Custom design is at the heart of Kazmi's Architects. We believe that every client and project is unique, deserving of personalized attention and tailored solutions. Our team thrives on the challenge of creating custom designs that meet the specific requirements and aspirations of our clients. From architectural structures to interior elements, we embrace innovation and craftsmanship to bring your vision to life. With meticulous attention to detail and a collaborative approach, we deliver exceptional custom designs that exceed expectations."
-  },
-  {
-  service: "Furniture & Decoration",
-  detail: "Furniture and decoration play a vital role in shaping the ambiance and functionality of any space. At Kazmi's Architects, we offer comprehensive furniture and decoration services to complement our design solutions. Our team curates a selection of high-quality furniture, fixtures, and accessories that align with the overall design concept, ensuring a cohesive and harmonious environment. Whether it's sourcing unique pieces or customizing furniture to fit specific spaces, we pay meticulous attention to detail, creating an exquisite and inviting atmosphere."
-  },
-  {
-  service: "Concept Planning",
-  detail: "Concept planning is the foundation of every successful project. At Kazmi's Architects, we excel in developing comprehensive and innovative concept plans that guide the entire design process. Our team combines creativity, research, and technical expertise to translate your vision into a tangible plan. We analyze site conditions, user requirements, and functional considerations to create thoughtful and sustainable concepts. By prioritizing effective space utilization, aesthetic appeal, and functionality, our concept planning sets the stage for a successful project execution."
-  },
-  {
-  service: "Project Management",
-  detail: "At Kazmi's Architects, we understand the importance of seamless project management in delivering exceptional results. Our experienced project managers oversee every aspect of the project, ensuring efficient coordination, timely execution, and adherence to budget and quality standards. From initial planning and procurement to construction oversight and final delivery, our team handles all project management responsibilities, allowing clients to have peace of mind. With our strong network of industry professionals and a focus on open communication, we ensure that every project is executed smoothly and to the highest standards."
-  }
-  ];
+import { useGetServicesQuery } from '../state/api';
+
 export default function Services() {
   const [selectedService,setSelectedService]=useState(0);
+  const {data,isLoading,isError}=useGetServicesQuery();
+
 
   return (
     <div className={styles.container}>
@@ -50,11 +28,11 @@ export default function Services() {
               <ul className={cls(styles.servicesNav,'mb-5')}>
               {
                 
-                services.map((item, index) => (
+                data?.data?.map((item, index) => (
                   <li key={index} id='item'
                   className={`${selectedService==index ? styles.selected : styles.notselected}`}
                   onClick={()=> setSelectedService(index)}>
-                    {item.service}
+                    {item.attributes.ServiceTitle}
                   </li>
                 ))
                 }
@@ -68,7 +46,7 @@ export default function Services() {
                     <h3 className='text-left'>We are focused on technically complex projects</h3>
 
                   </div>
-                  {services[selectedService].detail}
+                  {data?.data[selectedService]?.attributes.ServiceDescription}
                 </div>
             </div>
                

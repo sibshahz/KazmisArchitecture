@@ -38,8 +38,8 @@ export const api = createApi({
       query: () => "portfolio-projects?fields[0]=PortfolioTitle&fields[1]=ProjectDescription&fields[2]=Featured&populate[0]=ProjectImages&populate[1]=project_type&populate[2]=project_tags",
       providesTags: ["Portfolios"],
     }),
-    getCustomers: build.query({
-      query: () => "client/customers",
+    getServices: build.query({
+      query: () => "services?fields[0]=ServiceTitle&fields[1]=ServiceDescription",
       providesTags: ["Customers"],
     }),
     getTransactions: build.query({
@@ -76,4 +76,5 @@ export const api = createApi({
 export const {
   useGetAboutPageContentQuery,
   useGetPortfolioItemsQuery,
+  useGetServicesQuery,
 } = api;
