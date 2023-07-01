@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import cls from 'classnames';
 import styles from './feature-portfolio.module.css';
 import {building,kitchen,studio,home} from '../../data/images';
@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { useDispatch,useSelector } from 'react-redux';
 import { toggle } from '../../state/modal/modalSlice';
 import { setPost,setFilteredPosts } from '../../state/portfolio/portfolioSlice';
-const newimages=[];
+
 function Post({id,title,categories,featured,featuredImage,images}){
   const dispatch=useDispatch();
 
@@ -43,7 +43,12 @@ function Post({id,title,categories,featured,featuredImage,images}){
 }
 
 function FeaturedPortfolio({displayFeatured=true,displayCategory="all"}) {
-  const featuredPosts = useSelector((state) => state.portfolio.featuredPosts);
+  // const [displayPosts,setDisplayPosts]=useState();
+  // const featuredPosts = useSelector((state) => state.portfolio.featuredPosts);
+  const featuredPosts = useSelector((state) => state.portfolio.portfolioPosts);
+
+  
+  
   const dispatch=useDispatch();
   dispatch(setFilteredPosts("exterior"));
   
@@ -61,7 +66,7 @@ function FeaturedPortfolio({displayFeatured=true,displayCategory="all"}) {
               categories={item.attributes.project_tags}
               featured={item.attributes.Featured}
               featuredImage={item.attributes.ProjectImages.data[0]}
-              images={newimages}
+              images={item.attributes.ProjectImages.data}
               // images={item.attributes.ProjectImages}
             />
           ))

@@ -1,4 +1,4 @@
-import React,{useEffect,useRef,Suspense} from 'react';
+import React,{useEffect,useState,useRef,Suspense} from 'react';
 import { createPortal } from 'react-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggle } from '../../state/modal/modalSlice';
@@ -29,14 +29,24 @@ const style=
 };
 
 const ModalContainer = () => {
+  const [imagesLinks,setImagesLinks]=useState();
   const elementRef = useRef(null);
   const display = useSelector((state) => state.modal.displayModal);
   const selectedPost=useSelector((state) => state.portfolio.selectedPost);
+  
   const dispatch = useDispatch();
 
   useEffect(() => {
-   
-  }, []);
+    
+   if(selectedPost!=={}){
+    const tempArray=[];
+      selectedPost.images?.forEach(item => {
+        tempArray.push({src:`${process.env.NEXT_PUBLIC_API_MEDIA}${item.attributes.url}`});      	
+      })
+      console.log(tempArray);
+      setImagesLinks(tempArray);
+   }
+  }, [selectedPost]);
   function handleClick() {
     anime({
       targets: '.my-element',
@@ -66,7 +76,7 @@ const ModalContainer = () => {
             className={cls(styles.superModal,'my-element')} style={style}>
               <i className={cls('las la-times-circle',styles.closeButton)} onClick={()=> handleClick()}></i>
               <Suspense fallback={<div>Loading</div>}>
-                <Carousel2 images={selectedPost.images} />
+                <Carousel2 images={imagesLinks} />
               </Suspense>
             </div>,
             document.body

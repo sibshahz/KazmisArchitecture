@@ -5,6 +5,7 @@ import 'react-awesome-slider/dist/custom-animations/scale-out-animation.css';
 import 'react-awesome-slider/dist/styles.css';
 
 // const SliderText=()=>{
+  //NOT FILE
 //   return(
 //     <div className={cls(styles.outline)}>
 //     Kazmis Architects
@@ -21,6 +22,8 @@ import 'react-awesome-slider/dist/styles.css';
 
 function ModalSlider() {
   const images=useSelector((state) => state.portfolio.selectedPost.images);
+  console.log("🚀 ~ file: modal-slider.component.jsx:24 ~ ModalSlider ~ images:", images)
+  
   return (
     <AwesomeSlider
     animation='scaleOutAnimation'
