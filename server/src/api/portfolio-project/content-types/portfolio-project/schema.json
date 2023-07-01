@@ -40,6 +40,10 @@
       "relation": "manyToMany",
       "target": "api::project-tag.project-tag",
       "mappedBy": "portfolio_projects"
+    },
+    "Featured": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

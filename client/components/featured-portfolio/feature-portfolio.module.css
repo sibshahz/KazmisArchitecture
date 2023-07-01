@@ -21,6 +21,15 @@
 .itemCategory span{
     margin-right: 8px;
 }
+.itemCategory span:after{
+    content: "/";
+    position: relative;
+    margin-left: 8px;
+}
+.itemCategory span:last-of-type:after{
+    content:"";
+    position: relative;
+}
 .itemTitle{
 
 }

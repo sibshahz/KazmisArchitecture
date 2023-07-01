@@ -34,9 +34,9 @@ export const api = createApi({
       query: (id) => `about-page`,
       providesTags: ["AboutPage"]
     }),
-    getProducts: build.query({
-      query: () => "client/products",
-      providesTags: ["Products"],
+    getPortfolioItems: build.query({
+      query: () => "portfolio-projects?fields[0]=PortfolioTitle&fields[1]=ProjectDescription&fields[2]=Featured&populate[0]=ProjectImages&populate[1]=project_type&populate[2]=project_tags",
+      providesTags: ["Portfolios"],
     }),
     getCustomers: build.query({
       query: () => "client/customers",
@@ -75,4 +75,5 @@ export const api = createApi({
 
 export const {
   useGetAboutPageContentQuery,
+  useGetPortfolioItemsQuery,
 } = api;
