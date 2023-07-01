@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "project_types",
+  "info": {
+    "singularName": "project-type",
+    "pluralName": "project-types",
+    "displayName": "Project Types",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ProjectType": {
+      "type": "string"
+    },
+    "portfolio_projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::portfolio-project.portfolio-project",
+      "mappedBy": "project_type"
+    }
+  }
+}

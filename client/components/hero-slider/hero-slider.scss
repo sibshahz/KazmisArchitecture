@@ -1,19 +1,23 @@
-.awssld.awssld--cubeAnimation.awssld--organic-arrows{
-    --slider-height-percentage: 100vh;
-    --slide-width-percentage:50vw;
-    --slider-transition-duration: 770ms;
-    --slider-transition-duration: 330ms;
-    --organic-arrow-thickness: 4px;
-    --organic-arrow-border-radius: 0px;
-    --organic-arrow-height: 40px;
-    --organic-arrow-color: #fbb900;
-    // --organic-arrow-color:#0f0c29;
-    --control-button-width: 10%;
-    --control-button-height: 25%;
-    --control-button-background: transparent;
-    --control-bullet-color: #fbb900;
-    --control-bullet-active-color: #fbb900;
-    --loader-bar-color: #dba100;
-    --loader-bar-height: 6px;
-    }
+   .aws-btn,.awssld__controls,.awssld.awssld--scaleOutAnimation.awssld--organic-arrows {
+        min-height: 100vh;
+        --slider-height-percentage: 5%;
+        --slider-transition-duration: 700ms;
+        --organic-arrow-thickness: 4px;
+        --organic-arrow-border-radius: 0px;
+        --organic-arrow-height: 28px;
+        --organic-arrow-color: #e7b962;
+        --control-button-width: 10%;
+        --control-button-height: 25%;
+        --control-button-background: transparent;
+        --control-bullet-color: #a3b9d0;
+        --control-bullet-active-color: #8b9db1;
+        --loader-bar-color: #e7b962;
+        --loader-bar-height: 6px;
+        }
+        .awssld__timer.awssld__timer--animated.awssld__timer--run{
+            background-color: #e7b962;
 
+        }
+        .awssld__box{
+            background-color: #e7b962;
+        }

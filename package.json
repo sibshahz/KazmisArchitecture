@@ -12,9 +12,9 @@
     "dev-old": "npm run frontend & npm run backend",
     "dev": "npm-run-all --parallel frontend backend",
     "repo:upstream": "git fetch upstream && git merge upstream/main",
-    "start-server":"cd server && npm run start",
-    "start-client":"cd client && npm run start",
-    "start":"npm-run-all --parallel start-server start-client"
+    "start-server": "cd server && npm run start",
+    "start-client": "cd client && npm run start",
+    "start": "npm-run-all --parallel start-server start-client"
   },
   "repository": {
     "type": "git",
@@ -28,5 +28,9 @@
   "homepage": "https://github.com/sibshahz/KazmisArchitecture#readme",
   "devDependencies": {
     "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "rehype-raw": "^6.1.1",
+    "rehype-sanitize": "^5.0.1"
   }
 }

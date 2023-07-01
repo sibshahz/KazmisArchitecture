@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "portfolio_projects",
+  "info": {
+    "singularName": "portfolio-project",
+    "pluralName": "portfolio-projects",
+    "displayName": "Portfolio Project",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PortfolioTitle": {
+      "type": "string"
+    },
+    "ProjectDescription": {
+      "type": "text"
+    },
+    "ProjectImages": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "project_type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project-type.project-type",
+      "inversedBy": "portfolio_projects"
+    },
+    "project_tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project-tag.project-tag",
+      "mappedBy": "portfolio_projects"
+    }
+  }
+}

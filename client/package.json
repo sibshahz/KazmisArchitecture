@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "server_build":"BUILD_PATH=../server/public next build",
+    "server_build": "BUILD_PATH=../server/public next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -27,6 +27,7 @@
     "react-awesome-slider": "^4.1.0",
     "react-dom": "18.2.0",
     "react-gallery-carousel": "^0.4.0",
+    "react-markdown": "^8.0.5",
     "react-redux": "^8.0.5",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1"

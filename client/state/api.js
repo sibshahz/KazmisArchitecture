@@ -1,7 +1,25 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-
 export const api = createApi({
-  baseQuery: fetchBaseQuery({ baseUrl: process.env.API_URL }),
+  // baseQuery: fetchBaseQuery(
+  //   { baseUrl: process.env.API_URL,
+  //     prepareHeaders: (headers, { getState }) => {
+  //     headers.set('Authorization', `Bearer ${process.env.REQUEST_KEY}`)
+
+              
+
+        
+    
+  //     return headers
+  //     },
+    
+  //   }),
+  baseQuery: fetchBaseQuery({
+    baseUrl: process.env.API_URL,
+    prepareHeaders: (headers, { getState }) => {
+      headers.set('Authorization', `Bearer ${process.env.NEXT_PUBLIC_REQUEST_KEY}`);
+      return headers;
+    },
+  }),
   reducerPath: "backendapi",
   tagTypes: [
     "Portfolios",

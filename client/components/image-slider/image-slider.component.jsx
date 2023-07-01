@@ -14,9 +14,10 @@ const ImageGallery = () => {
     })
     .catch((error) => console.log(error));
 }, []);
-
+  
   return (
     <div className='gallery'>
+
       {imageUrls.map((url) => (
         <img key={url} src={url} alt="gallery" />
       ))}
