@@ -5,9 +5,7 @@ import styles from '../styles/About.module.css';
 import { TitleWrap } from '../components/title-wrap/title-wrap.component';
 import aboutPic from '../public/images/aboutPic.jpg';
 import { useGetAboutPageContentQuery } from '../state/api';
-import ReactMarkdown from 'react-markdown';
-import rehypeRaw from 'rehype-raw';
-import rehypeSanitize from 'rehype-sanitize';
+
 
 export default function About() {
   const { data, isLoading, isError } = useGetAboutPageContentQuery();
