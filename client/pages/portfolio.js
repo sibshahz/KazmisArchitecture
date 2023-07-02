@@ -5,22 +5,23 @@ import styles from '../styles/Portfolio.module.css';
 import { TitleWrap } from '../components/title-wrap/title-wrap.component';
 import FeaturedPortfolio from '../components/featured-portfolio/featured-portfolio.component.jsx';
 import ModalContainer from '../components/modal/modal.component';
-import { useGetProjectTypesQuery } from '../state/api';
+import { useGetProjectTypesQuery,useGetProjectTagsQuery} from '../state/api';
 import { useDispatch,useSelector } from 'react-redux';
-import { setProjectTypes,setFilteredPosts } from '../state/portfolio/portfolioSlice';
+import { setProjectTypes,setFilteredPosts,setProjectTags } from '../state/portfolio/portfolioSlice';
 
 export default function Portfolio() {
   const dispatch = useDispatch();
   const {data,isLoading,isError}=useGetProjectTypesQuery();
+  const {data:tags_data,isLoading:tags_isLoading,isError:tags_isError}=useGetProjectTagsQuery();
+
   useEffect(() => {
     if(data){
       dispatch(setProjectTypes(data.data));
     }
-  
-    return () => {
-      
+    if(tags_data){
+      dispatch(setProjectTags(tags_data.data));
     }
-  }, [data]);
+  }, [data,tags_data]);
   const projectTypes=useSelector((state) => state.portfolio.projectTypes);
   
   

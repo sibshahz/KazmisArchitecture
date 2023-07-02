@@ -26,6 +26,7 @@ export const api = createApi({
     "AboutPage",
     "ServicesPage",
     "ProjectTypes",
+    "ProjectTags",
     "ContactPage",
     "MainSlider",
     "SocialMedias",
@@ -47,26 +48,11 @@ export const api = createApi({
       query: () => "project-types?fields[0]=ProjectType",
       providesTags: ["ProjectTypes"],
     }),
-    getGeography: build.query({
-      query: () => "client/geography",
-      providesTags: ["Geography"],
+    getProjectTags: build.query({
+      query: () => "project-tags?fields[0]=Tag",
+      providesTags: ["ProjectTags"],
     }),
-    getSales: build.query({
-      query: () => "sales/sales",
-      providesTags: ["Sales"],
-    }),
-    getAdmins: build.query({
-      query: () => "management/admins",
-      providesTags: ["Admins"],
-    }),
-    getUserPerformance: build.query({
-      query: (id) => `management/performance/${id}`,
-      providesTags: ["Performance"],
-    }),
-    getDashboard: build.query({
-      query: () => "general/dashboard",
-      providesTags: ["Dashboard"],
-    }),
+    
   }),
 });
 
@@ -75,4 +61,5 @@ export const {
   useGetPortfolioItemsQuery,
   useGetServicesQuery,
   useGetProjectTypesQuery,
+  useGetProjectTagsQuery,
 } = api;

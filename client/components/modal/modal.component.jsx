@@ -43,7 +43,6 @@ const ModalContainer = () => {
       selectedPost.images?.forEach(item => {
         tempArray.push({src:`${process.env.NEXT_PUBLIC_API_MEDIA}${item.attributes.url}`});      	
       })
-      console.log(tempArray);
       setImagesLinks(tempArray);
    }
   }, [selectedPost]);
