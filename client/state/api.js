@@ -25,6 +25,7 @@ export const api = createApi({
     "Portfolios",
     "AboutPage",
     "ServicesPage",
+    "ProjectTypes",
     "ContactPage",
     "MainSlider",
     "SocialMedias",
@@ -40,15 +41,11 @@ export const api = createApi({
     }),
     getServices: build.query({
       query: () => "services?fields[0]=ServiceTitle&fields[1]=ServiceDescription",
-      providesTags: ["Customers"],
+      providesTags: ["ServicesPage"],
     }),
-    getTransactions: build.query({
-      query: ({ page, pageSize, sort, search }) => ({
-        url: "client/transactions",
-        method: "GET",
-        params: { page, pageSize, sort, search },
-      }),
-      providesTags: ["Transactions"],
+    getProjectTypes: build.query({
+      query: () => "project-types?fields[0]=ProjectType",
+      providesTags: ["ProjectTypes"],
     }),
     getGeography: build.query({
       query: () => "client/geography",
@@ -77,4 +74,5 @@ export const {
   useGetAboutPageContentQuery,
   useGetPortfolioItemsQuery,
   useGetServicesQuery,
+  useGetProjectTypesQuery,
 } = api;

@@ -33,16 +33,24 @@
   .outline p{
     font-size: 1.2rem;
   }
-  .outline .button,.button a{
+  .outline .button{
     background-color: #e7b962;
     color: white;
     font-size: 1.2rem;
+    font-weight: 300;
     padding: .5rem 1.2rem;
     margin-top: 1.2rem;
     width: fit-content;
-  }
-  .outline .button a{
-    color: white;
+    border: 2px solid #e7b962;
+    transition: all .2s cubic-bezier(0.6, 0.28, 0.735, 0.045);
+    -webkit-transition: all .2s cubic-bezier(0.6, 0.28, 0.735, 0.045);
+    -moz-transition: all .2s cubic-bezier(0.6, 0.28, 0.735, 0.045);
+    -ms-transition: all .2s cubic-bezier(0.6, 0.28, 0.735, 0.045);
+    -o-transition: all .2s cubic-bezier(0.6, 0.28, 0.735, 0.045);
+}
+  .outline .button:hover{
+    background-color: rgba(255,255,255,.65);
+    color: #e7b962;
   }
   @media screen and (max-width:768px) {
     .outline{

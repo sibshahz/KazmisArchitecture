@@ -17,7 +17,7 @@ const SliderText=()=>{
     We work closely with clients to gain an understanding of your desires both philoso phical and practical.
     </p>
 
-    <div className={cls(styles.button)}><Link href="/portfolio">Visit Portfolio</Link></div>
+    <Link href="/portfolio"><div className={cls(styles.button)}>Visit Portfolio</div></Link>
   </div>
   )
 };

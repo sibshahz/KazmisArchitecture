@@ -6,6 +6,7 @@ const initialState = {
   filteredPortfolioPosts:[],
   featuredPosts:[],
   selectedPost:{},
+  projectTypes:[],
 }
 
 export const portfolioSlice = createSlice({
@@ -22,12 +23,19 @@ export const portfolioSlice = createSlice({
       state.portfolioPosts=action.payload;
     },
     setFilteredPosts: (state,action) => {
-      state.filteredPortfolioPosts=state.portfolioPosts.filter(item => item.projectCategory == action.payload);
+      console.log(action.payload);
+      state.filteredPortfolioPosts=state.portfolioPosts.filter(item => item.attributes.project_type.data.id === action.payload);
     },
+    setProjectTypes:(state,action)=>{
+      state.projectTypes=action.payload;
+    }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { toggle,setPost,setFilteredPosts,setPortfolioPosts,setFeaturedPosts } = portfolioSlice.actions;
+export const { 
+  toggle,setPost,setFilteredPosts,setPortfolioPosts,setFeaturedPosts,setProjectTypes
+
+} = portfolioSlice.actions;
 
 export default portfolioSlice.reducer;

@@ -1,10 +1,29 @@
+import { useEffect } from 'react';
 import Head from 'next/head';
+import cls from 'classnames';
 import styles from '../styles/Portfolio.module.css';
 import { TitleWrap } from '../components/title-wrap/title-wrap.component';
 import FeaturedPortfolio from '../components/featured-portfolio/featured-portfolio.component.jsx';
 import ModalContainer from '../components/modal/modal.component';
+import { useGetProjectTypesQuery } from '../state/api';
+import { useDispatch,useSelector } from 'react-redux';
+import { setProjectTypes,setFilteredPosts } from '../state/portfolio/portfolioSlice';
 
 export default function Portfolio() {
+  const dispatch = useDispatch();
+  const {data,isLoading,isError}=useGetProjectTypesQuery();
+  useEffect(() => {
+    if(data){
+      dispatch(setProjectTypes(data.data));
+    }
+  
+    return () => {
+      
+    }
+  }, [data]);
+  const projectTypes=useSelector((state) => state.portfolio.projectTypes);
+  
+  
   return (
     <div className={styles.container}>
       <Head>
@@ -15,7 +34,13 @@ export default function Portfolio() {
 
       <main className="main">
         <TitleWrap title="Portfolio" />
-
+        <div className={cls(styles.projectTypeContainer)}>
+        {
+          projectTypes.map(item => (
+            <div key={item.id} className={cls(styles.projectTypes)} onClick={() => dispatch(setFilteredPosts(item.id))}>{item.attributes.ProjectType}</div>
+          ))
+        }
+        </div>
         <FeaturedPortfolio />
         <ModalContainer />
       </main>
