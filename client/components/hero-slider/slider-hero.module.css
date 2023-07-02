@@ -2,7 +2,7 @@
     color: transparent;
     color: #0f0c29;
     /* color:#fbb900; */
-    background-color: rgba(255,255,255,.5);
+    background-color: rgba(255,255,255,.65);
     z-index: 1000;
     /* text-shadow: 2px 1px 2px black; */
     /* color: rgba(255, 255, 255, 0.2); */
@@ -22,27 +22,51 @@
     margin-top: 40vh;
     
   }
+  .outline h5{
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .outline h1{
+    font-weight: 900;
+    color: #e7b962;
+  }
   .outline p{
-    font-size: 2rem;
+    font-size: 1.2rem;
+  }
+  .outline .button,.button a{
+    background-color: #e7b962;
+    color: white;
+    font-size: 1.2rem;
+    padding: .5rem 1.2rem;
+    margin-top: 1.2rem;
+    width: fit-content;
+  }
+  .outline .button a{
+    color: white;
   }
   @media screen and (max-width:768px) {
     .outline{
-      font-size:3rem;
+      font-size:1.8rem;
       margin-top: 40vh;
     }
     .outline p{
-      font-size: 1.5rem;
+      font-size: 1rem;
       
     }
   }
   @media screen and (max-width:640px) {
     .outline{
-      font-size:2rem;
       width: 100%;
       margin-left: .5rem;
     }
     .outline p{
-      font-size: 1.5rem;
+      font-size: 1rem;
       
+    }
+    .outline h5{
+      font-size: 1.1rem;
+    }
+    .outline h1{
+      font-size: 1.4rem;
     }
   }

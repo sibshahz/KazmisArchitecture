@@ -5,16 +5,19 @@ import 'react-awesome-slider/dist/custom-animations/scale-out-animation.css';
 import 'react-awesome-slider/dist/styles.css';
 import styles from './slider-hero.module.css';
 import { slide1,slide2,slide3,slide4,slide5 } from '../../data/images';
+import Link from "next/link";
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 const SliderText=()=>{
   return(
     <div className={cls(styles.outline)}>
-    Kazmis Architects
+    <h5>Designing spaces that inspire.</h5>
+    <h1>Kazmis Architects</h1>
     <p>
-    Designing spaces that inspire.
+    We work closely with clients to gain an understanding of your desires both philoso phical and practical.
     </p>
-    {/* <div className={cls(styles.button)}><Link href="/portfolio">See portfolio</Link></div> */}
+
+    <div className={cls(styles.button)}><Link href="/portfolio">Visit Portfolio</Link></div>
   </div>
   )
 };
