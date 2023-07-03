@@ -99,7 +99,7 @@ function PortfolioProjects() {
             <h5 className={cls('uppercase text-center mb-2', styles.tagLine)}>Visit our portfolio</h5>
             <h2 className={cls('text-center pb-2',styles.mainTitle)}>Explore our latest and awesome projects</h2>
             </div>
-            {filteredPosts.length > 0 ? (
+            {filteredPosts.length >= 0 ? (
               filteredPosts.map((item) => (
                 <Post
                   key={item.attributes.id}
