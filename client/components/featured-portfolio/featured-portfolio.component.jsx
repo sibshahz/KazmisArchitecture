@@ -45,7 +45,7 @@ function Post({id,title,categories,featured,featuredImage,images}){
 function FeaturedPortfolio({displayFeatured=true,displayCategory="all"}) {
   // const [displayPosts,setDisplayPosts]=useState();
   // const featuredPosts = useSelector((state) => state.portfolio.featuredPosts);
-  const featuredPosts = useSelector((state) => state.portfolio.portfolioPosts);
+  const featuredPosts = useSelector((state) => state.portfolio.featuredPosts);
 
   
   
