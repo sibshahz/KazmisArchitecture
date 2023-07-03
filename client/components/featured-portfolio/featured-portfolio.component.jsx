@@ -59,7 +59,7 @@ function FeaturedPortfolio({displayFeatured=true,displayCategory="all"}) {
         <h2 className={cls('text-center pb-20',styles.mainTitle)}>Explore our latest and awesome projects</h2>
         <div className={cls('grid grid-cols-1 md:grid-cols-2 portfolioItems gap-x-10 gap-y-5')}>
         {
-          featuredPosts.map(item => (
+          featuredPosts?.map(item => (
             <Post
               key={item.attributes.id}
               title={item.attributes.PortfolioTitle}
