@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "server_build": "BUILD_PATH=../server/public next build",
+    "dev:static": "serve ../server/out",
+    "build": "next build && next export",
+    "server_build": "PATH=../server/build next build",
     "start": "next start",
     "lint": "next lint"
   },
