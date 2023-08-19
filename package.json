@@ -1,36 +1,33 @@
 {
-  "name": "kazmis_architecture",
-  "version": "1.0.0",
-  "description": "FUll stack web application for kazmis architecture",
+  "name": "server",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
   "scripts": {
-    "frontend": "npm run dev --prefix client",
-    "backend": "npm run develop --prefix server",
-    "clear": "cd frontend && rm -rf .next && rm -rf cache",
-    "setup:frontend": "cd client && npm install",
-    "setup:backend": "cd server && npm install",
-    "setup": "npm install && npm setup:frontend && npm setup:backend",
-    "dev-old": "npm run frontend & npm run backend",
-    "dev": "npm-run-all --parallel frontend backend",
-    "repo:upstream": "git fetch upstream && git merge upstream/main",
-    "start-server": "cd server && npm run start",
-    "start-client": "cd client && npm run start",
-    "start": "npm-run-all --parallel start-server start-client"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sibshahz/KazmisArchitecture.git"
-  },
-  "author": "Shahid Gillani",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sibshahz/KazmisArchitecture/issues"
-  },
-  "homepage": "https://github.com/sibshahz/KazmisArchitecture#readme",
-  "devDependencies": {
-    "npm-run-all": "^4.1.5"
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
   },
   "dependencies": {
-    "rehype-raw": "^6.1.1",
-    "rehype-sanitize": "^5.0.1"
-  }
+    "@strapi/plugin-i18n": "4.9.1",
+    "@strapi/plugin-users-permissions": "4.9.1",
+    "@strapi/provider-upload-aws-s3": "^4.12.5",
+    "@strapi/provider-upload-cloudinary": "^4.12.5",
+    "@strapi/strapi": "4.9.1",
+    "better-sqlite3": "8.0.1",
+    "pg": "^8.11.3",
+    "pg-connection-string": "^2.6.2"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "db842a34-1726-4f32-a175-57a439f464af"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
 }
