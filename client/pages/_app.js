@@ -9,13 +9,13 @@ import DataComponent from '../components/data-component/data-component.component
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    
+
     <Provider store={store}>
       <Layout>
         <Head>
           <meta name="viewport" content="viewport-fit=cover" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        	{/* <meta name="viewport" content="width=device-width, initial-scale=1" /> */}
+        	<meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
         <DataComponent />
         <Component {...pageProps} />
