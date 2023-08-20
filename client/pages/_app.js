@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import '../styles/globals.css';
 import Layout from '../components/layout';
 import Head from 'next/head';
@@ -6,8 +7,13 @@ import '../components/modal-slider/modal-slider.module.scss';
 import { Provider } from 'react-redux';
 import { store } from '../state/store';
 import DataComponent from '../components/data-component/data-component.component';
+import { loadPortfolioPosts } from '../state/portfolio/portfolioSlice';
 
 export default function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    loadPortfolioPosts();
+  }, [])
+  
   return (
 
     <Provider store={store}>

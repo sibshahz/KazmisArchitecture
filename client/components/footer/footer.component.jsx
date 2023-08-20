@@ -21,8 +21,8 @@ function Footer() {
           </h3>
           <div className={cls(styles.footerContent,styles.contactText)}>
             <p>124th Street DHA, Karachi</p>
-            <p>T. +92308-5736457</p>
-            <p>E. kazmis@kazmisgroup.com</p>
+            <p>T. +92 332 2920195</p>
+            <p>E. kazmiyoung@gmail.com</p>
           </div>
         </div>
         <div className={styles.footerCol}>

@@ -24,8 +24,11 @@ export const portfolioSlice = createSlice({
       state.portfolioPosts=action.payload;
     },
     setFilteredPosts: (state,action) => {
-      action.payload===0 ? state.filteredPortfolioPosts = state.portfolioPosts :
-      state.filteredPortfolioPosts=state.portfolioPosts.filter(item => item.attributes.project_type.data.id === action.payload);
+      
+        action.payload===0 ? state.filteredPortfolioPosts = state.portfolioPosts :
+        state.filteredPortfolioPosts=state.portfolioPosts.filter(item => item.attributes.project_type.data.id === action.payload);
+      
+
     },
     setProjectTypes:(state,action)=>{
       state.projectTypes=action.payload;
@@ -41,5 +44,6 @@ export const {
   toggle,setPost,setFilteredPosts,setPortfolioPosts,setFeaturedPosts,setProjectTypes,setProjectTags,
 
 } = portfolioSlice.actions;
+
 
 export default portfolioSlice.reducer;
