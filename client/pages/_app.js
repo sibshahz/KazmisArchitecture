@@ -7,12 +7,9 @@ import '../components/modal-slider/modal-slider.module.scss';
 import { Provider } from 'react-redux';
 import { store } from '../state/store';
 import DataComponent from '../components/data-component/data-component.component';
-import { loadPortfolioPosts } from '../state/portfolio/portfolioSlice';
 
 export default function MyApp({ Component, pageProps }) {
-  useEffect(() => {
-    loadPortfolioPosts();
-  }, [])
+
   
   return (
 
