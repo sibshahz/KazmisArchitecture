@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { portfolioItems } from '../../data/data';
+// import { portfolioItems } from '../../data/data';
 
 const initialState = {
   portfolioPosts: [],
@@ -26,7 +26,7 @@ export const portfolioSlice = createSlice({
     setFilteredPosts: (state,action) => {
       
         action.payload===0 ? state.filteredPortfolioPosts = state.portfolioPosts :
-        state.filteredPortfolioPosts=state.portfolioPosts.filter(item => item.attributes.project_type.data.id === action.payload);
+        state.filteredPortfolioPosts=state.portfolioPosts?.filter(item => item?.attributes?.project_type?.data?.id === action.payload);
       
 
     },

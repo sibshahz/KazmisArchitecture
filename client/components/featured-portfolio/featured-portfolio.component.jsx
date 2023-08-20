@@ -49,8 +49,8 @@ function FeaturedPortfolio({displayFeatured=true,displayCategory="all"}) {
 
   
   
-  const dispatch=useDispatch();
-  dispatch(setFilteredPosts("exterior"));
+  // const dispatch=useDispatch();
+  // dispatch(setFilteredPosts("exterior"));
   
   return (
     <section className={cls(styles.featuredPortfolio,'pt-24','pb-7')}>
