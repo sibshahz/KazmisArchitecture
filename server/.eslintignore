@@ -1,4 +1,3 @@
 .cache
 build
-client
 **/node_modules/**
