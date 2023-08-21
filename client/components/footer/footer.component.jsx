@@ -22,7 +22,7 @@ function Footer() {
           <div className={cls(styles.footerContent,styles.contactText)}>
             <p>124th Street DHA, Karachi</p>
             <p>T. +92 332 2920195</p>
-            <p>E. kazmiyoung@gmail.com</p>
+            <p>E. Jawadkazmi.arch@gmail.com</p>
           </div>
         </div>
         <div className={styles.footerCol}>

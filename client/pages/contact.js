@@ -25,7 +25,7 @@ export default function Contact() {
             </div>           
             <div className={cls(styles.contactDivider)}></div>            
             <div className={cls(styles.contactText)}>
-              <a href='tel:+923085736457'>+92308-5736457</a>
+              <a href='tel:+923085736457'>+92 332 2920195</a>
             </div>
           </div>
 
@@ -38,7 +38,7 @@ export default function Contact() {
             </div>
             <div className={cls(styles.contactDivider)}></div>            
             <div className={cls(styles.contactText)}>
-            <a href="mailto:kazmis@kazmis.com">kazmis@kazmis.com</a>
+            <a href="mailto:jawadkazmi.arch@gmail.com">jawadkazmi.arch@gmail.com</a>
             </div>
           </div>
 
