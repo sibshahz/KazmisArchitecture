@@ -5,6 +5,9 @@ require("dotenv").config();
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    domains: ['localhost','res.cloudinary.com'],
+  },
   env:{
     API_URL:process.env.API_URL,
     // API_KEY: process.env.API_KEY,

@@ -1,8 +1,9 @@
    .aws-btn,.awssld__controls,.awssld.awssld--scaleOutAnimation.awssld--organic-arrows {
-        min-height: 100vh;
+        // min-height: 100vh;
+        min-height: 88vh;
         --slider-height-percentage: 5%;
         --slider-transition-duration: 700ms;
-        --organic-arrow-thickness: 4px;
+        --organic-arrow-thickness: 0px;
         --organic-arrow-border-radius: 0px;
         --organic-arrow-height: 28px;
         --organic-arrow-color: #e7b962;

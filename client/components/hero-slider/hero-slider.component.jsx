@@ -28,7 +28,8 @@ function HeroSlider() {
     <AutoplaySlider
     play={true}
     cancelOnInteraction={false} // should stop playing on user interaction
-    interval={3000}
+    interval={4000}
+    arrows={false}
     animation="scaleOutAnimation"
     bullets={false}
     customContent={<SliderText />}
