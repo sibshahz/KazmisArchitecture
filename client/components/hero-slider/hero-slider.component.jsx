@@ -12,7 +12,7 @@ const SliderText=()=>{
   return(
     <div className={cls(styles.outline)}>
     <h5>Designing spaces that inspire.</h5>
-    <h1>Kazmis Architects</h1>
+    <h1>Kazmi Architects</h1>
     <p>
     We work closely with clients to gain an understanding of your desires both philoso phical and practical.
     </p>
@@ -34,10 +34,11 @@ function HeroSlider() {
     bullets={false}
     customContent={<SliderText />}
   >
-    <div data-src={slide1} />
-    <div data-src={slide2} />
+    
     <div data-src={slide3} />
     <div data-src={slide4} />
+    <div data-src={slide1} />
+    <div data-src={slide2} />
     <div data-src={slide5} />
   </AutoplaySlider>
   )

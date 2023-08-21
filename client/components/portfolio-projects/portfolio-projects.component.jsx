@@ -22,8 +22,8 @@ function Post({id,title,categories,featured,featuredImage,images}){
               <div className={cls(styles.cover)}>
                 <i className="las la-expand-arrows-alt"></i>
               </div>
-              <img className={cls('absolute w-full',styles.portfolioImage)} width="auto" height="100%" src={`${process.env.NEXT_PUBLIC_API_MEDIA}${featuredImage.attributes.url}`} alt="Portfolio building" />
-              {/* <div className={cls(styles.bgImage)} style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_API_MEDIA}${featuredImage.attributes.url})` }}></div> */}
+              {/* <img className={cls('absolute w-full',styles.portfolioImage)} width="auto" height="100%" src={`${process.env.NEXT_PUBLIC_API_MEDIA}${featuredImage.attributes.url}`} alt="Portfolio building" /> */}
+              <div className={cls(styles.bgImage)} style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_API_MEDIA}${featuredImage.attributes.url})` }}></div>
             </div>
             <div className={cls(styles.itemDetail,'relative z-10 bg-white bottom-0 pt-4 pr-12 pl-12')}>
               <div className={cls(styles.itemCategory)}>
