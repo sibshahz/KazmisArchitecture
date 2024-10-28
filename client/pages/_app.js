@@ -11,7 +11,7 @@ import { initFacebookPixel } from '../components/facebookPixel';
 
 export default function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
       initFacebookPixel();
     }
   }, []);
