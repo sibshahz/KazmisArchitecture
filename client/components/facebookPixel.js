@@ -1,4 +1,3 @@
-// lib/facebookPixel.js
 import ReactPixel from 'react-facebook-pixel';
 
 export const initFacebookPixel = () => {
