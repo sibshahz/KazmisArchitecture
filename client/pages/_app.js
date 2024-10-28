@@ -20,8 +20,8 @@ export default function MyApp({ Component, pageProps }) {
           <meta name="viewport" content="viewport-fit=cover" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         	<meta name="viewport" content="width=device-width, initial-scale=1" />
-          <Pixel name="FACEBOOK_PIXEL_1" />
         </Head>
+        <Pixel name="FACEBOOK_PIXEL_1" />
         <DataComponent />
         <Component {...pageProps} />
       </Layout>
